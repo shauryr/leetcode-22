@@ -8,6 +8,7 @@ main idea is to store the child node and the next node in a stack or recursive c
 2. next comes after child
 3. once the pointers are fixed - popped node child must be None
 ​
+​
 There is a need for a dummy pointer as well - explained in the code.
 ​
 ​
