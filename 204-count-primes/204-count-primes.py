@@ -4,10 +4,16 @@ class Solution:
             return 0
         
         '''
-        Make an array of size n/2
-        1. start with 2 and iterate over n checking 
-        - remove the ones which mod 2 give 0; keep the ones which dont
-        2. do same with 3  and keep going till n/2
+        make a flag array of size n
+        mark default values as 1 - assume everything is prime
+        
+        iterate from 2 to end:
+            if that number is prime then:
+                multiples of the prime number starting with p*p -> because all the numbers below that would have been covered by the lower prime number :  all numbers can be shown as a factor of prime numbers
+                mark all these as not prime
+                
+        return the sum of the flag array
+        
         '''
         # 1 means it is prime
         # 0 means it is not prime
@@ -16,7 +22,7 @@ class Solution:
         for i in range(2, int(sqrt(n) + 1)):
 
             # set all multiples of p to 0 - they are not prime
-            if numbers[i] == 1:
+            if numbers[i] != 0: # if this number has been marked as prime already then only do this.
                 for multiple in range(i*i, n, i):
                     numbers[multiple] = 0
 
