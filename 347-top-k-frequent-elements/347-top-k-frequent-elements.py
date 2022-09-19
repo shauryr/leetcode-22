@@ -21,4 +21,3 @@ class Solution:
             result.append(heappop(heap)[1])
         
         return result
-            
