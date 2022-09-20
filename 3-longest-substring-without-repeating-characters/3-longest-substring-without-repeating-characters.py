@@ -13,7 +13,10 @@ class Solution:
                 max(max_l, char_index - start_idx + 1)
             
             dict_s[char] = i
-                
+        
+        points:
+        keep a track of each character in the longest substring - if it occured earlier
+        if it occurs then move ahead - start_idx
         """
         
         max_l = 0
