@@ -11,10 +11,13 @@ class Solution:
         tups = []
         heap = []
         for value, count in dict_counts.items():
-            tups.append((-count, value))
+            tups.append((count, value))
             
         for pair in tups:
-            heappush(heap, pair)
+            if len(heap) < k:
+                heappush(heap, pair)
+            elif heap[0][0]< pair[0]:
+                heapreplace(heap, pair)
         
         result = []
         for i in range(k):
