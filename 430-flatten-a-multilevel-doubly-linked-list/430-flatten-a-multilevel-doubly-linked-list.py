@@ -24,8 +24,10 @@ class Solution:
             
             # first add next and then the child
             # child needs to be popped earlier
-            if popped_node.next: stack.append(popped_node.next)
-            if popped_node.child: stack.append(popped_node.child)
+            if popped_node.next: 
+                stack.append(popped_node.next)
+            if popped_node.child: 
+                stack.append(popped_node.child)
                 
             '''
             now fix the pointers
